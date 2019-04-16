@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://codingdojo.org/kata/GameOfLife/ -->
+<html><head lang="en-us"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">
+  <link href="./Game of life - Coding Dojo_files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./Game of life - Coding Dojo_files/codingdojo.css">
+  <title>Game of life - Coding Dojo</title>
+  <meta name="generator" content="Hugo 0.37.1">
+
+  
+  <link rel="canonical" href="http://codingdojo.org/kata/GameOfLife/">
+  
+
+  <meta property="og:url" content="//codingdojo.org/kata/GameOfLife/">
+  <meta property="og:title" content="Coding Dojo">
+  
+  <meta name="apple-mobile-web-app-title" content="Coding Dojo">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://codingdojo.org/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="http://codingdojo.org/images/favicon.ico">
+</head>
+
+<body>
+  <header class="main-header">
+    <h1><a href="http://codingdojo.org/">Coding Dojo</a></h1>
+    <nav class="main-header__nav main-nav">
+      <ul class="main-nav__list"><li class="main-nav__item">
+          <a href="http://codingdojo.org/dojo/" class="main-nav__link">Dojos</a>
+        </li><li class="main-nav__item main-nav__item--active">
+          <a href="http://codingdojo.org/kata/" class="main-nav__link">Kata</a>
+        </li><li class="main-nav__item">
+          <a href="http://codingdojo.org/people/" class="main-nav__link">Peoples</a>
+        </li><li class="main-nav__item">
+          <a href="http://codingdojo.org/record/" class="main-nav__link">Records</a>
+        </li><li class="main-nav__item">
+          <a href="http://codingdojo.org/solution/" class="main-nav__link">Solutions</a>
+        </li>
+      </ul>
+    </nav>
+</header>
+
+<div class="top-right-corner ribbon gradient">
+  <div class="seams">
+  <a class="" href="https://github.com/codingdojo-org" title="View on GitHub">
+    Edit on Github
+  </a>
+    </div>
+</div>
+
+  <article class="page">
+    <div class="content">
+      <h1>
+        Game of life
+        
+      </h1>
+
+      
+
+<p><strong>About this Kata</strong></p>
+
+<p>This was presented as a <a href="http://codingdojo.org/PreparedKata">PreparedKata</a> at XP2005, by Emmanuel Gaillot.</p>
+
+<p>Difficulty - medium</p>
+
+<p>Similar Katas - <a href="http://codingdojo.org/kata/Minesweeper">KataMinesweeper</a> ,
+<a href="http://codingdojo.org/kata/Reversi">KataReversi</a></p>
+
+<h1 id="problem-description">Problem Description</h1>
+
+<p>This Kata is about calculating the next generation of Conway’s game of
+life, given any starting position. See
+<a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life</a> for background.</p>
+
+<p>You start with a two dimensional grid of cells, where each cell is
+either alive or dead. In this version of the problem, the grid is
+finite, and no life can exist off the edges. When calcuating the next
+generation of the grid, follow these rules:</p>
+
+<pre><code>   1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+   2. Any live cell with more than three live neighbours dies, as if by overcrowding.
+   3. Any live cell with two or three live neighbours lives on to the next generation.
+   4. Any dead cell with exactly three live neighbours becomes a live cell.
+</code></pre>
+
+<p>You should write a program that can accept an arbitrary grid of cells,
+and will output a similar grid showing the next generation.</p>
+
+<h1 id="clues">Clues</h1>
+
+<p>The input starting position could be a text file that looks like this:</p>
+
+<pre><code>Generation 1:
+4 8
+........
+....*...
+...**...
+........
+</code></pre>
+
+<p>And the output could look like this:</p>
+
+<pre><code>Generation 2:
+4 8
+........
+...**...
+...**...
+........
+</code></pre>
+
+<p>The input format is similar to that in <a href="http://codingdojo.org/kata/Minesweeper">KataMinesweeper</a>, and is easily parsed in most languages.</p>
+
+<h1 id="front-end">Front End</h1>
+
+<p>Make a beautiful IHM to render grid of any size in one page.</p>
+
+<h1 id="suggested-test-cases">Suggested Test Cases</h1>
+
+<p>Make sure you have enough coverage of edge</p>
+
+<p>cases - where there are births and deaths at the edge of the grid.</p>
+
+<h1 id="comments-from-those-who-are-working-on-this-kata">Comments from those who are working on this Kata</h1>
+
+<p>One possible solution in Java:
+<a href="https://github.com/fabricejeannet/kataGameOfLife">https://github.com/fabricejeannet/kataGameOfLife</a></p>
+
+<p>Elegant comonadic solution in Haskell:
+<a href="http://blog.emillon.org/posts/2012-10-18-comonadic-life.html">http://blog.emillon.org/posts/2012-10-18-comonadic-life.html</a></p>
+
+      <div class="article-footer">
+        <a class="button" href="https://github.com/codingdojo-org/codingdojo.org/edit/master/content/kata/GameOfLife.md">Edit</a>
+      </div>
+    </div>
+  </article>
+  <footer class="bottom">
+  <nav>
+    <ul>
+
+      
+      <li><a href="http://codingdojo.org/fr/">fr</a></li>
+      
+      <li><a href="http://codingdojo.org/">en</a></li>
+      
+      <li><a href="http://codingdojo.org/pt/">pt</a></li>
+      
+    </ul>
+  </nav>
+</footer>
+
+
+
+</body></html>
